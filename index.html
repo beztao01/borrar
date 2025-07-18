@@ -161,16 +161,18 @@
 
 					carModel.getObjectByName( 'glass' ).material = glassMaterial;
 
+					const geometry = new THREE.BoxGeometry(1,1,1);
+					const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+					const cube = new THREE.Mesh( geometry, material );
+					scene.add( cube );	
+
 					wheels.push(
 						carModel.getObjectByName( 'wheel_fl' ),
 						carModel.getObjectByName( 'wheel_fr' ),
 						carModel.getObjectByName( 'wheel_rl' ),
-						carModel.getObjectByName( 'wheel_rr' )
+						carModel.getObjectByName( 'wheel_rr' ),
 
-						const geometry = new THREE.BoxGeometry(1,1,1)
-						const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-						const cube = new THREE.Mesh( geometry, material );
-					scene.add( cube );	
+						
 					);
 
 					// shadow
